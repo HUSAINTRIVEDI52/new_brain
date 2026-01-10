@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-dotenv
+requests
+faiss-cpu
+supabase==2.10.0
+pydantic-settings
+httpx
+websockets>=13.0
+cachetools
+PyJWT[crypto]

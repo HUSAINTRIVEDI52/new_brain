@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Crimson+Pro:wght@400;600&family=Lora:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400&display=swap');
+
+:root {
+  /* Color Palette - Solarized Manuscript */
+  --paper-bg: #FDF6E3;
+  --paper-surface: #EEE8D5;
+  --ink-text: #433422;
+  --ink-subtle: rgba(67, 52, 34, 0.5);
+  --burnt-sienna: #CB4B16;
+  --sepia-border: rgba(67, 52, 34, 0.1);
+
+  /* Typography Scale */
+  --font-heading: 'Playfair Display', serif;
+  --font-sub: 'Crimson Pro', serif;
+  --font-body: 'Lora', serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --h1: 3.052rem;
+  --h2: 2.441rem;
+  --h3: 1.953rem;
+  --body: 1rem;
+  --small: 0.8rem;
+
+  /* Spacing Rhythm */
+  --space-unit: 8px;
+  --padding-canvas: 2rem;
+  --gap-element: 1.5rem;
+
+  --radius-soft: 6px;
+  --ease-manuscript: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-quiet: all 0.4s var(--ease-manuscript);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--paper-bg);
+  /* Tactile Paper Texture */
+  background-image:
+    radial-gradient(at 0% 0%, rgba(203, 75, 22, 0.02) 0, transparent 50%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  color: var(--ink-text);
+  font-family: var(--font-body);
+  font-optical-sizing: auto;
+  line-height: 1.7;
+  /* Increased for breathing room */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: var(--gap-element);
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: var(--h1);
+}
+
+h2 {
+  font-size: var(--h2);
+  color: var(--burnt-sienna);
+  font-style: italic;
+  font-family: var(--font-sub);
+}
+
+h3 {
+  font-size: var(--h3);
+  font-family: var(--font-sub);
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 2rem;
+  /* Consistent flow */
+  letter-spacing: 0.01em;
+}
+
+/* Button & Interaction Aesthetics */
+
+button {
+  cursor: pointer;
+  background: var(--paper-surface);
+  color: var(--ink-text);
+  border: 1px dashed var(--ink-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-soft);
+  font-family: var(--font-sub);
+  font-weight: 600;
+  transition: var(--transition-quiet);
+}
+
+button:hover {
+  background: #E6DFCB;
+  box-shadow: 0 4px 15px rgba(67, 52, 34, 0.05);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.button-minimal {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 4px 0;
+  border-radius: 0;
+  opacity: 0.6;
+}
+
+.button-minimal:hover {
+  opacity: 1;
+  background: transparent;
+  border-bottom-color: var(--burnt-sienna);
+  box-shadow: none;
+}
+
+/* Input Styles */
+
+input,
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px dotted var(--sepia-border);
+  padding: 0.75rem 0;
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--ink-text);
+  caret-color: var(--burnt-sienna);
+  width: 100%;
+  transition: var(--transition-quiet);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 1.5px solid var(--burnt-sienna);
+  background: rgba(203, 75, 22, 0.01);
+  /* Faint ink bleed */
+}
+
+/* Dotted/Dashed Separators */
+
+hr {
+  border: none;
+  border-top: 1px dotted var(--sepia-border);
+  margin: 3rem 0;
+}
+
+.dot-sep {
+  color: var(--ink-subtle);
+  font-family: var(--font-sub);
+  letter-spacing: 0.4em;
+}
+
+::selection {
+  background: var(--burnt-sienna);
+  color: white;
+}

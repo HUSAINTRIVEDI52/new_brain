@@ -1,0 +1,30 @@
+.memory-feed {
+    margin-top: 2rem;
+}
+
+.feed-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feed-status {
+    padding: 4rem;
+    text-align: center;
+    font-family: var(--font-sub);
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.feed-status.error {
+    color: var(--burnt-sienna);
+    opacity: 1;
+}
+
+.empty-feed {
+    padding: 8rem 0;
+    text-align: center;
+    font-family: var(--font-sub);
+    font-style: italic;
+    opacity: 0.5;
+}

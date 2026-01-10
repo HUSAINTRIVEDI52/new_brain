@@ -1,0 +1,92 @@
+.chronology-view {
+    margin-top: 3rem;
+    padding-left: 0.5rem;
+}
+
+.year-section {
+    margin-bottom: 8rem;
+}
+
+.year-header {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--ink-text);
+    margin-bottom: 4rem;
+    letter-spacing: -0.02em;
+}
+
+.month-group {
+    margin-bottom: 5rem;
+}
+
+.month-label {
+    font-family: var(--font-sub);
+    font-size: 1.8rem;
+    font-style: italic;
+    color: var(--burnt-sienna);
+    margin-bottom: 3.5rem;
+}
+
+.timeline-items {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.timeline-item {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+    transition: var(--transition-quiet);
+}
+
+.item-anchor {
+    flex-shrink: 0;
+    width: 90px;
+    text-align: right;
+    padding-top: 0.3rem;
+}
+
+.day-mono {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    color: var(--ink-subtle);
+    transition: var(--transition-quiet);
+}
+
+.item-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.item-summary {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #554433;
+    margin: 0;
+    transition: var(--transition-quiet);
+}
+
+.chronology-status {
+    padding: 8rem;
+    text-align: center;
+    font-family: var(--font-sub);
+    font-style: italic;
+    color: var(--ink-subtle);
+}
+
+.chronology-status.error {
+    color: var(--burnt-sienna);
+}
+
+/* Hover effects for reflection */
+.timeline-item:hover .item-summary {
+    color: var(--ink-text);
+}
+
+.timeline-item:hover .day-mono {
+    color: var(--burnt-sienna);
+}

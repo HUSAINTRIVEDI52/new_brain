@@ -1,0 +1,143 @@
+.layout-root {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Subtle Left Sidebar */
+.sidebar-archives {
+    width: 220px;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.sidebar-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    color: var(--ink-subtle);
+    display: block;
+    margin-bottom: 3rem;
+}
+
+.sidebar-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-list li {
+    font-family: var(--font-sub);
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: var(--ink-subtle);
+    transition: var(--transition-quiet);
+}
+
+.sidebar-list li:hover {
+    color: var(--burnt-sienna);
+    transform: translateX(4px);
+}
+
+/* Main Perspective Area */
+.main-perspective {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding-bottom: 8rem;
+}
+
+/* The Promenade (Header) */
+.promenade {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px dotted var(--sepia-border);
+    background: rgba(253, 246, 227, 0.85);
+    backdrop-filter: blur(8px);
+}
+
+.header-logo {
+    font-size: 1.6rem;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+.header-right {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.button-ink {
+    background: transparent;
+    border: none;
+    font-family: var(--font-sub);
+    font-size: 0.9rem;
+    color: var(--ink-text);
+    cursor: pointer;
+    opacity: 0.6;
+    transition: var(--transition-quiet);
+    padding: 8px 12px;
+}
+
+.button-ink:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
+
+.close-btn {
+    font-size: 0.85rem;
+    color: var(--burnt-sienna);
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* The Manuscript (Content Column) */
+.content-manuscript {
+    max-width: 680px;
+    width: 100%;
+    margin: 6rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+.manuscript-footer {
+    max-width: 680px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.faint-hr {
+    border: none;
+    border-top: 1px dotted var(--sepia-border);
+    margin-bottom: 2rem;
+}
+
+.footer-note {
+    font-family: var(--font-sub);
+    font-size: 0.85rem;
+    color: var(--ink-subtle);
+    font-style: italic;
+}
+
+/* Hide scrollbar for sidebar while maintaining scroll function */
+.sidebar-archives::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}

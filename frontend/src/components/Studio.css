@@ -1,0 +1,75 @@
+.studio-container {
+    margin: 4rem 0;
+    transition: var(--transition-quiet);
+    position: relative;
+    z-index: 10;
+}
+
+.studio-textarea {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--ink-text);
+    width: 100%;
+    border: none;
+    background: transparent;
+    resize: none;
+    min-height: 120px;
+    padding: 0;
+    margin-bottom: 2rem;
+    transition: var(--transition-quiet);
+}
+
+.studio-textarea:focus {
+    outline: none;
+}
+
+.studio-textarea::placeholder {
+    font-style: italic;
+    opacity: 0.25;
+}
+
+.studio-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.ink-well {
+    width: 100%;
+    height: 1px;
+    background: var(--sepia-border);
+    position: relative;
+}
+
+.ink-level {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: width 0.3s ease, background-color 0.5s ease;
+}
+
+.seal-button {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: var(--transition-quiet);
+}
+
+.studio-container:focus-within .seal-button,
+.studio-container.has-content .seal-button {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Focus Mode Effects - Handled globally via class on layout or body */
+.focus-mode .studio-textarea {
+    font-size: 1.4rem;
+}
+
+.studio-container:focus-within {
+    transform: scale(1.02);
+}
