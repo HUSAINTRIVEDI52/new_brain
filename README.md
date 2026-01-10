@@ -1,0 +1,165 @@
+# 🧠 Second Brain
+
+**Second Brain** is an AI-powered personal memory system that helps users store, recall, connect, and resurface their thoughts over time. Unlike traditional note-taking tools that rely on folders and keyword search, Second Brain understands **meaning, context, and time**, acting as an external memory for long-term thinking.
+
+> *Humans are good at thinking, but bad at remembering. Second Brain remembers for you.*
+
+---
+
+## ✨ What Makes It Different
+
+* Understands **semantic meaning**, not keywords
+* Connects related ideas using **Graph RAG**
+* Models memory decay with a **forgetting curve**
+* Proactively resurfaces important but fading thoughts
+* Requires **no manual folders or tagging**
+
+This is not a notes app. It is a **thinking companion**.
+
+---
+
+## 🚩 Problem
+
+Ideas are scattered across notes apps, documents, chats, and messages. Over time, these thoughts become fragmented, forgotten, and difficult to retrieve. Traditional search fails because it relies on keywords and ignores context, meaning, and how human memory works.
+
+---
+
+## 💡 Solution
+
+Second Brain transforms static notes into a **living memory system** by:
+
+* Automatically summarizing notes
+* Embedding thoughts semantically
+* Connecting related memories across time
+* Ranking recall using relevance, importance, and decay
+* Enabling natural language recall ("Ask your past self")
+
+---
+
+## 🧠 Core Features
+
+* **Text-Based Note Capture** – Simple, distraction-free writing
+* **AI Auto-Summary** – 1–3 sentence summaries for fast recall
+* **Semantic Search & Q&A** – Ask questions in natural language
+* **Timeline View** – See how ideas evolve over time
+* **Connected Memories (Graph RAG)** – Context-aware recall
+* **Forgetting Curve Intelligence** – Memory states: strong, fading, resurfaced
+* **Memory Resurfacing** – Prevents loss of high-impact ideas
+
+---
+
+## 🧩 Architecture Overview
+
+```
+React / Next.js (Frontend)
+        ↓
+FastAPI (AI & Intelligence Layer)
+        ↓
+Supabase (PostgreSQL + Auth)
+        ↓
+FAISS (Vector Search)
+        ↓
+OpenRouter (LLMs & Embeddings)
+```
+
+* Frontend consumes stable REST APIs only
+* Backend owns all intelligence and decision-making
+* Scalable, mobile-ready, and model-agnostic
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* React
+* Next.js (App Router)
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
+
+### Backend
+
+* Python
+* FastAPI
+* Pydantic
+* NetworkX (Graph RAG)
+
+### Data & AI
+
+* Supabase (PostgreSQL + Auth)
+* FAISS (Vector DB)
+* OpenRouter (LLMs & embeddings)
+
+---
+
+## 🔐 Key Design Principles
+
+* Memory over storage
+* Recall over retrieval
+* Meaning over keywords
+* Automation over manual effort
+* Calm, editorial user experience
+
+---
+
+## 🚫 What This Project Does NOT Do
+
+* No folders or manual tags
+* No complex graph visualizations
+* No collaboration (initial MVP)
+* No voice or PDF ingestion (future scope)
+
+---
+
+## 🎬 Demo Flow
+
+1. Upload multiple notes (from different times)
+2. Ask a natural language question
+3. Receive:
+
+   * AI-generated summary
+   * Relevant & related memories
+   * Timeline-based recall
+   * Highlighted resurfaced ideas
+
+---
+
+## 🤖 Agentic / Autonomous Behavior
+
+* Automatically understands and summarizes memories
+* Expands recall context using Graph RAG
+* Models memory decay without user input
+* Re-ranks and resurfaces important fading ideas
+* Requires zero manual maintenance
+
+---
+
+## 📈 Success Metrics
+
+* Recall accuracy
+* Relevance quality
+* User "aha" moments
+* Demo clarity
+
+---
+
+## 🔮 Future Vision
+
+* Voice-based memory capture
+* Knowledge graph visualization
+* Cross-device sync
+* Team knowledge spaces
+* AI-driven reminders
+
+---
+
+## 🏁 One-Line Definition
+
+**Second Brain is an AI-powered memory system that understands, connects, and resurfaces your ideas over time.**
+
+---
+
+## 🙌 Final Note
+
+Second Brain is built to grow with its users over years, quietly handling memory so they can focus on thinking, learning, and creating.
