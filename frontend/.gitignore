@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.tools/
+node_modules/
+.env
+.env.*
+.env.local
